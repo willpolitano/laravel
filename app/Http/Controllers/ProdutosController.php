@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreUpdateProductRequest;
 
 class ProdutosController extends Controller
 {
@@ -16,8 +17,18 @@ class ProdutosController extends Controller
         return view('produtos.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreUpdateProductRequest $request)
     {
+        /*
+        $request->validate([
+            'nome' => 'required|min:3|max:25',
+            'descricao' => 'nullable|min:3|max:10000',
+            'foto' => 'required|image'
+        ]);
+        */
+
+        dd('OK');
+
         //recebe somente os valores
         //dd($request->only(['nome', 'descricao']));
 
