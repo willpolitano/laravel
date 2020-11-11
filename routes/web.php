@@ -54,5 +54,7 @@ Route::group(['prefix' => 'estruturas'], function () {
     });
 });
 
+Route::resource('produtos', 'ProdutosController');
+
 
 
