@@ -36,5 +36,23 @@ Route::match(['post', 'delete'], '/match', function() {
     return 'match';
 });
 
+Route::group(['prefix' => 'estruturas'], function () {
+
+    Route::get('/controles', function() {
+
+        $variavel = 123;
+
+        return view('estruturas.controles', compact('variavel'));
+    });
+
+    Route::get('/repeticoes', function() {
+
+        $devs = ['will', 'felipe', 'joao', 'maria', 'isa'];
+        $devss = [];
+
+        return view('estruturas.repeticoes', compact('devs', 'devss'));
+    });
+});
+
 
 
